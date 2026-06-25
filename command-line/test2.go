@@ -6,15 +6,13 @@ import (
 )
 
 func main() {
-	var s, sep string
+	// var s, sep string
 
 	if len(os.Args) == 1 {
 		fmt.Println(os.Args[0])
 	}
 	
-	for _, args := range os.Args[1:] {
-		s += sep + args
-		sep = " "
+	for index, arg := range os.Args[1:] {
+		fmt.Printf("Index: %d, Argument: %s\n", index+1, arg)
 	}
-	fmt.Println(s)
 }
